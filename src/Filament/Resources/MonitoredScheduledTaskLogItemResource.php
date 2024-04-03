@@ -19,6 +19,10 @@ class MonitoredScheduledTaskLogItemResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getCluster(): ?string
+    {
+        return __(config('filament-schedule-monitor.resources.monitored_scheduled_task_log_item.cluster'));
+    }
     public static function getNavigationGroup(): ?string
     {
         return __(config('filament-schedule-monitor.resources.monitored_scheduled_task_log_item.navigation_group'));

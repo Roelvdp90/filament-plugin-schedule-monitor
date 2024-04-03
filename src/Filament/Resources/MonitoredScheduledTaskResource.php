@@ -13,6 +13,11 @@ class MonitoredScheduledTaskResource extends Resource
 {
     protected static ?string $model = MonitoredScheduledTask::class;
 
+    public static function getCluster(): ?string
+    {
+        return __(config('filament-schedule-monitor.resources.monitored_scheduled_task.cluster'));
+    }
+
     public static function getNavigationGroup(): ?string
     {
         return __(config('filament-schedule-monitor.resources.monitored_scheduled_task.navigation_group'));
